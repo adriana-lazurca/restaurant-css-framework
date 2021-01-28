@@ -39,3 +39,8 @@ a:hover {
   background-color: rgb(119, 33, 33);
   
 }
+
+.text-red {
+  font-size: 2rem;
+  color:darkred;
+}
