@@ -16,3 +16,12 @@
 body {
     background-color: #ffb6c13b;
 }
+
+.menu-badge {
+    padding: 0.5em 0.8em;
+    height: 2.2em;
+    margin-left: 1em;
+}
+.display-badge {
+    display:flex;
+}
