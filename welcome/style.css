@@ -14,7 +14,18 @@
 } */
 
 body {
-    background-color: #ffb6c13b;
+  background-color: #ffb6c13b;
+}
+
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: #e6c5c880;
 }
 
 .display-title {
@@ -27,20 +38,7 @@ body {
   background-color: #c12d3cc4;
 }
 
-a:active,
-a:link,
-a:visited {
-  text-decoration: none;
-  color: white;
-  
-}
-
-a:hover {
-  background-color: rgb(119, 33, 33);
-  
-}
-
 .text-red {
   font-size: 2rem;
-  color:darkred;
+  color: darkred;
 }
