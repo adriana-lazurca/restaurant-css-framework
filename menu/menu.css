@@ -1,17 +1,3 @@
-/* /* .container {
-    background-color: bisque;
-    border: 1px solid black;
-}
-
-.row {
-    background-color: bisque;
-    border: 1px solid black;
-}
-
-.row > * {
-    background-color:darksalmon;
-    border: 1px solid black; 
-}*/
 
 body {
     background-color: #ffb6c13b;
@@ -24,4 +10,33 @@ body {
 }
 .display-badge {
     display:flex;
+    padding: 0;
 }
+
+.dark-red {
+    background-color: #c12d3cc4;
+  }
+
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  
+}
+
+a:hover {
+  background-color: rgb(119, 33, 33);
+  
+}
+
+.text-red {
+  font-size: 2rem;
+  color:darkred;
+}
+
+.display-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
