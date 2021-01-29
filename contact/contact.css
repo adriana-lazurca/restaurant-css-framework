@@ -1,0 +1,32 @@
+body {
+    background-color: #ffb6c13b;
+}
+
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  
+}
+
+a:hover {
+  background-color: #e6c5c880;
+  
+}
+
+.dark-red {
+    background-color: #c12d3cc4;
+  }
+
+
+.text-red {
+  font-size: 2rem;
+  color:darkred;
+}
+
+.display-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
