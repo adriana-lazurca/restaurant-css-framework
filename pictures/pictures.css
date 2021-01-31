@@ -1,5 +1,5 @@
 body {
-    background-color: #ffb6c13b;
+  background-color: #ffb6c13b;
 }
 
 a:active,
@@ -7,26 +7,33 @@ a:link,
 a:visited {
   text-decoration: none;
   color: white;
-  
 }
 
 a:hover {
   background-color: #e6c5c880;
-  
 }
 
 .dark-red {
-    background-color: #c12d3cc4;
-  }
-
+  background-color: #c12d3cc4;
+}
 
 .text-red {
   font-size: 2rem;
-  color:darkred;
+  color: darkred;
 }
 
 .display-title {
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 1.2;
-  }
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.img-container {
+  max-height: 15rem;
+}
