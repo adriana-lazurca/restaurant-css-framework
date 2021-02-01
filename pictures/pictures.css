@@ -34,9 +34,23 @@ img {
   object-fit: scale-down;
 }
 
+/* img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+} */
+
 .img-container {
   max-height: 15rem;
+  
 }
+
+/* .container-img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  margin: 20px;
+} */
 
 /* .pagination a:hover{
   color:black;
@@ -48,4 +62,14 @@ img {
 .pagination a:visited {
   text-decoration: none;
   color: rgb(226, 95, 95);
+}
+
+.page-item.active .page-link {
+  color: #a54c4c;
+  background-color: #b16a7136;
+  border-color: #b16a7136;
+}
+
+.page-link:focus {
+  box-shadow: 0 0 0 0.2rem #b16a7136;
 }
