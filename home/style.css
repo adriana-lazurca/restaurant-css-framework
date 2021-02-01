@@ -1,6 +1,7 @@
 body {
   background-color: #ffb6c13b;
   color: #721c24;
+  font-family: cursive;
 }
 
 .text-color {
@@ -9,6 +10,11 @@ body {
 
 .bg-red {
   background-color: #f5c6cb;
+}
+
+.nav-text {
+  font-family: cursive;
+  font-weight: bold;
 }
 
 a:active,
@@ -22,16 +28,6 @@ a:hover {
   background-color: #f5c6cb;
 }
 
-.display-title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-.dark-red {
-  background-color: #c12d3cc4;
-}
-
 .text-red {
   font-size: 2rem;
   color: darkred;
@@ -41,3 +37,14 @@ a:hover {
   padding: 0;
   background-color: transparent;
 }
+
+/* .display-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+} */
+
+/* .dark-red {
+  background-color: #c12d3cc4;
+} */
+
