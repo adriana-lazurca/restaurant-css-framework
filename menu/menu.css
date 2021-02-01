@@ -1,43 +1,64 @@
-
 body {
-    background-color: #ffb6c13b;
+  background-color: #ffb6c13b;
+  color: #721c24;
+  font-family: cursive;
+}
+
+.text-color {
+  color: #721c24;
+}
+
+.bg-red {
+  background-color: #f5c6cb;
+}
+
+.nav-text {
+  font-family: cursive;
+  font-weight: bold;
 }
 
 a:active,
 a:link,
 a:visited {
   text-decoration: none;
-  color: white;
-  
+  color: #721c;
 }
 
 a:hover {
-  background-color: #e6c5c880;
-  
+  background-color: #f5c6cb;
 }
-
-.menu-badge {
-    padding: 0.5em 0.8em;
-    height: 2.2em;
-    margin-left: 1em;
-}
-.display-badge {
-    display:flex;
-    padding: 0;
-}
-
-.dark-red {
-    background-color: #c12d3cc4;
-  }
-
 
 .text-red {
   font-size: 2rem;
-  color:darkred;
+  color: darkred;
+}
+
+.menu-badge {
+  padding: 0.5em 0.8em;
+  height: 2.2em;
+  margin-left: 1em;
+}
+
+.display-badge {
+  display: flex;
+  padding: 8px 0 0 0;
+}
+
+.dark-red {
+  background-color: #c12d3cc4;
+}
+
+.text-red {
+  font-size: 2rem;
+  color: darkred;
 }
 
 .display-title {
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 1.2;
-  }
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.list-group-item {
+  border: none;
+}
