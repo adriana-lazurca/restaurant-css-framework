@@ -8,37 +8,42 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="restaurant.css">
+    <link rel="stylesheet" href="location.css">
 </head>
 
 <body>
     <div class="container mt-2">
 
-        <!-- Header and navigation -->
         <div class="row">
+            <!-- Header and navigation -->
             <div class="col-12">
                 <header>
-
-                    <ul class="nav dark-red">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../welcome/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../menu/menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pictures/pictures.html">Pictures</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../restaurant/restaurant.html">Restaurant</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contact/contact.html">Contact</a>
-                        </li>
-                    </ul>
-
-                    <h4 class="mt-2 text-center">How to find us</h4>
-
+                    <nav class="navbar navbar-expand-sm navbar-light bg-red">
+                        <!-- <a class="navbar-brand" href="#"></a> -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav nav-text">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../menu/menu.html">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../gallery/gallery.html">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../location/location.html">Location</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../contact/contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </header>
             </div>
         </div>
@@ -46,13 +51,13 @@
         <!-- Logo -->
         <div class="row">
             <div class="col-12">
-                <img src="../restaurant/logo3.png" class="img-fluid max-width: 100%" alt="logo">
+                <img src="../location/logo3.png" class="img-fluid max-width: 100%" alt="logo">
             </div>
         </div>
 
         <!-- Addresses -->
         <div class="row">
-            <div class="col-12 col-md-6 mt-4">
+            <div class="col-12 col-sm-6 mt-4">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Bruxelles</h5>
@@ -63,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 mt-4">
+            <div class="col-12 col-sm-6 mt-4">
                 <div class="mapouter">
                     <div class="gmap_canvas">
                         <iframe width="auto" height="250" id="gmap_canvas"
@@ -74,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 mt-4">
+            <div class="col-12 col-sm-6 mt-4">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Liège</h5>
@@ -84,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 mt-4">
+            <div class="col-12 col-sm-6 mt-4">
                 <div class="mapouter">
                     <div class="gmap_canvas">
                         <iframe width="auto" height="250" id="gmap_canvas"
@@ -98,12 +103,11 @@
 
         <!-- Footer -->
         <div class="row">
-            <div class="col-12 mt-4 text-center text-red">
+            <div class="col-12 text-center text-red mt-5">
                 <footer>
                     <h5>Follow us</h5>
 
                     <ul class="nav justify-content-center">
-
                         <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook p-2 text-red"
                                     aria-hidden="true"></i></a></li>
                         <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter p-2 text-red"
@@ -112,22 +116,22 @@
                                     aria-hidden="true"></i></a></li>
 
                     </ul>
-
                 </footer>
             </div>
         </div>
+    </div>
 
 
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

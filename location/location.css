@@ -1,31 +1,36 @@
 body {
   background-color: #ffb6c13b;
+  color: #721c24;
+  font-family: cursive;
+}
+
+.text-color {
+  color: #721c24;
+}
+
+.bg-red {
+  background-color: #f5c6cb;
+}
+
+.nav-text {
+  font-family: cursive;
+  font-weight: bold;
 }
 
 a:active,
 a:link,
 a:visited {
   text-decoration: none;
-  color: white;
+  color: #721c;
 }
 
 a:hover {
-  background-color: #e6c5c880;
-}
-
-.dark-red {
-  background-color: #c12d3cc4;
+  background-color: #f5c6cb;
 }
 
 .text-red {
   font-size: 2rem;
   color: darkred;
-}
-
-.display-title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.2;
 }
 
 .mapouter {
