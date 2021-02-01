@@ -38,6 +38,12 @@ a:hover {
   background-color: transparent;
 }
 
+.img-fluid {
+  max-height: 85vh;
+  display: block;
+  margin: auto;
+}
+
 /* .display-title {
   font-size: 2.5rem;
   font-weight: 400;
@@ -47,4 +53,3 @@ a:hover {
 /* .dark-red {
   background-color: #c12d3cc4;
 } */
-

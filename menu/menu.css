@@ -4,10 +4,6 @@ body {
   font-family: cursive;
 }
 
-.text-color {
-  color: #721c24;
-}
-
 .bg-red {
   background-color: #f5c6cb;
 }
@@ -42,21 +38,6 @@ a:hover {
 .display-badge {
   display: flex;
   padding: 8px 0 0 0;
-}
-
-.dark-red {
-  background-color: #c12d3cc4;
-}
-
-.text-red {
-  font-size: 2rem;
-  color: darkred;
-}
-
-.display-title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1.2;
 }
 
 .list-group-item {
