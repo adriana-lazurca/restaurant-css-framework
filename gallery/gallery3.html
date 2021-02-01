@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="pictures.css">
+    <link rel="stylesheet" href="gallery.css">
 </head>
 
 <body>
@@ -18,27 +18,32 @@
             <!-- Header and navigation -->
             <div class="col-12">
                 <header>
-
-                    <ul class="nav dark-red">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../welcome/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../menu/menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pictures/pictures.html">Pictures</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../restaurant/restaurant.html">Restaurant</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contact/contact.html">Contact</a>
-                        </li>
-                    </ul>
-
-                    <h4 class="mt-2 text-center">Gallery</h4>
-
+                    <nav class="navbar navbar-expand-sm navbar-light bg-red">
+                        <!-- <a class="navbar-brand" href="#"></a> -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav nav-text">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../menu/menu.html">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../gallery/gallery.html">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../location/location.html">Location</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../contact/contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </header>
             </div>
         </div>
@@ -54,10 +59,10 @@
                                 <span class="sr-only">Previous</span>
                             </a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="./pictures.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="./pictures2.html">2</a></li>
-                        <li class="page-item active"><a class="page-link" href="./pictures3.html">3</a></li>
-                        <li class="page-item"><a class="page-link" href="./pictures4.html">4</a></li>
+                        <li class="page-item"><a class="page-link" href="./gallery.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="./gallery2.html">2</a></li>
+                        <li class="page-item active"><a class="page-link" href="./gallery3.html">3</a></li>
+                        <li class="page-item"><a class="page-link" href="./gallery4.html">4</a></li>
                         <li class="page-item">
                             <a class="page-link" href="#" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
@@ -83,26 +88,25 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
+
         <!-- Footer -->
-        <div class="col-12 mt-4 text-center text-red">
-            <footer>
-                <h5>Follow us</h5>
+        <div class="row">
+            <div class="col-12 text-center text-red mt-5">
+                <footer>
+                    <h5>Follow us</h5>
 
-                <ul class="nav justify-content-center">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook p-2 text-red"
+                                    aria-hidden="true"></i></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter p-2 text-red"
+                                    aria-hidden="true"></i></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-instagram p-2 text-red"
+                                    aria-hidden="true"></i></a></li>
 
-                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook p-2 text-red"
-                                aria-hidden="true"></i></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter p-2 text-red"
-                                aria-hidden="true"></i></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-instagram p-2 text-red"
-                                aria-hidden="true"></i></a></li>
-
-                </ul>
-
-            </footer>
+                    </ul>
+                </footer>
+            </div>
         </div>
     </div>
 
