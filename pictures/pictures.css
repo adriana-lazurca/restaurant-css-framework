@@ -37,3 +37,15 @@ img {
 .img-container {
   max-height: 15rem;
 }
+
+/* .pagination a:hover{
+  color:black;
+
+} */
+
+.pagination a:active,
+.pagination a:link,
+.pagination a:visited {
+  text-decoration: none;
+  color: rgb(226, 95, 95);
+}
