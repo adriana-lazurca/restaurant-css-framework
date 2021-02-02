@@ -9,12 +9,12 @@ The project started on 28/01/2021 and ended on 02/02/2021.
 The website must be responsive, at least for small and medium screens. It must at least have five accessible pages: welcome, menu, pictures, restaurants and contact; __Botrstrap__ is the main used technology.
 
 ##### Used technologies
--*Git and GitHub*
--*Visual Studio Code*
--*HTML 5*
--*CSS 3*
--*Bootrsrap*
--*Font Awesome*
+**Git and GitHub*
+**Visual Studio Code*
+**HTML 5*
+**CSS 3*
+**Bootrsrap*
+**Font Awesome*
 
 ##### Credits:
 -the pictures used in the project are from [Unsplash](https://unsplash.com/) 
