@@ -18,37 +18,47 @@
             <!-- Header and navigation -->
             <div class="col-12">
                 <header>
-
-                    <ul class="nav dark-red">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../welcome/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../menu/menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pictures/pictures.html">Pictures</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../restaurant/restaurant.html">Restaurant</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contact/contact.html">Contact</a>
-                        </li>
-                    </ul>
-
+                    <nav class="navbar navbar-expand-sm navbar-light bg-red">
+                        <!-- <a class="navbar-brand" href="#"></a> -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav nav-text">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../menu/menu.html">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../gallery/gallery.html">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../location/location.html">Location</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../contact/contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </header>
             </div>
+        </div>
 
-            <div class="col-8 offset-2 mb-5">
-                <section class="mt-4 mb-4"> 
-                    <h6>Do you have a suggestion?</h6>
-                    <h5>Let us know</h5>
-                </section>
+        <div class="row">
+            <div class="col-10 col-offset-2 mt-5 mb-5 text-center">
+                <h5>Do you have a suggestion? Let us know</h5>
+            </div>
+        </div>
 
 
-                <!-- Form -->
-                <form>
+        <!-- Form -->
+        <div class="row">
+            <div class="col-12 col-md-8 col-md-offset-2 mx-auto">
+                <form>  
                     <!-- Name -->
                     <div class="form-group">
                         <label for="exampleFormControlInput1">First name</label>
@@ -91,15 +101,17 @@
                     </div>
                 </form>
             </div>
+        </div>
 
 
-            <!-- Footer -->
-            <div class="col-12 mt-4 text-center text-red">
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="col-12 text-center text-red mt-5">
                 <footer>
                     <h5>Follow us</h5>
 
                     <ul class="nav justify-content-center">
-
                         <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook p-2 text-red"
                                     aria-hidden="true"></i></a></li>
                         <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter p-2 text-red"
@@ -108,20 +120,21 @@
                                     aria-hidden="true"></i></a></li>
 
                     </ul>
-
                 </footer>
             </div>
         </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
