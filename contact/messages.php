@@ -37,38 +37,7 @@
 
     <div class="container mt-2">
 
-        <div class="row">
-            <!-- Header and navigation -->
-            <div class="col-12">
-                <header>
-                    <nav class="navbar navbar-expand-sm navbar-light bg-red">
-                        <!-- <a class="navbar-brand" href="#"></a> -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav nav-text">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../home">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../menu/menu.html">Menu</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../gallery/gallery.html">Gallery</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../location/location.html">Location</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../contact/contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </header>
-            </div>
-        </div>
+        <?php include 'navbar.php'; ?>
 
         <div class="row">
             <div class="col-10 col-offset-2 mt-5 mb-5 text-center">
@@ -76,47 +45,68 @@
             </div>
         </div>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Message</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
+        <!-- SWITCH TABS -->
+        <nav class="pb-4">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">MESSAGES</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">GUEST BOOK</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">GALLERY</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <!-- CREATE TABLE -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
 
-            <?php
-            // Display messages
-            while ($data = $response->fetch()) {
-                //echo '<p><strong>' . htmlspecialchars($data['User_Email']) . '</strong> : ' . htmlspecialchars($data['Message']) . '</p>';
-                //$userName = isset($_POST['firstName']) . " " . isset($_POST['lastName']);
-            ?>
-                <tbody>
-                    <tr>
-                        <td> <?php echo ($data['Review_Date']) ?> </td>
-                        <td> <?php echo ($data['User_Name']) ?> </td>
-                        <td> <?php echo ($data['User_Email']) ?> </td>
-                        <td> <?php echo ($data['Message']) ?> </td>
-                        <td>
-                            <a href="messages.php?id=<?php echo ($data['Id']) ?>">
-                                <i class='fa fa-trash'></i>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
+                    <?php
+                    // Display messages
+                    while ($data = $response->fetch()) {
 
-            <?php
-            }
-            ?>
-        </table>
+                    ?>
+                        <tbody>
+                            <tr>
+                                <td> <?php echo ($data['Review_Date']) ?> </td>
+                                <td> <?php echo ($data['User_Name']) ?> </td>
+                                <td> <?php echo ($data['User_Email']) ?> </td>
+                                <td> <?php echo ($data['Message']) ?> </td>
+                                <td>
+                                    <a href="messages.php?id=<?php echo ($data['Id']) ?>">
+                                        <i class='fa fa-trash'></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    <?php
+                    }
+                    ?>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2</div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">3</div>
+        </div>
+
+        <?php include 'footer.php'; ?>
+
     </div>
 
     <?php
     $response->closeCursor();
     $dataBase = null;
     ?>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

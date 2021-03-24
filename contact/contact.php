@@ -13,38 +13,7 @@
 <body>
     <div class="container mt-2">
 
-        <div class="row">
-            <!-- Header and navigation -->
-            <div class="col-12">
-                <header>
-                    <nav class="navbar navbar-expand-sm navbar-light bg-red">
-                        <!-- <a class="navbar-brand" href="#"></a> -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav nav-text">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../home">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../menu/menu.html">Menu</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../gallery/gallery.html">Gallery</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../location/location.html">Location</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../contact/contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </header>
-            </div>
-        </div>
+        <?php include 'navbar.php'; ?>
 
         <div class="row">
             <div class="col-10 col-offset-2 mt-5 mb-5 text-center">
@@ -104,21 +73,7 @@
 
 
 
-        <!-- Footer -->
-        <div class="row">
-            <div class="col-12 text-center text-red mt-5">
-                <footer>
-                    <h5>Follow us</h5>
-
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook p-2 text-red" aria-hidden="true"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter p-2 text-red" aria-hidden="true"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-instagram p-2 text-red" aria-hidden="true"></i></a></li>
-
-                    </ul>
-                </footer>
-            </div>
-        </div>
+        <?php include 'footer.php'; ?>
     </div>
 
     <?php
@@ -138,10 +93,10 @@
         $result->closeCursor();
     }
 
-    
+
     ?>
 
-    
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
