@@ -48,13 +48,13 @@
         <!-- SWITCH TABS -->
         <nav class="pb-4">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">MESSAGES</a>
-                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">GUEST BOOK</a>
-                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">GALLERY</a>
+                <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home">MESSAGES</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile">GUEST BOOK</a>
+                <a class="nav-item nav-link active" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact">GALLERY</a>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="tab-pane fade <?php echo ""?>" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <!-- CREATE TABLE -->
                 <table class="table">
                     <thead>
@@ -91,8 +91,12 @@
                     ?>
                 </table>
             </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2</div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">3</div>
+            <div class="tab-pane fade <?php echo ""?>" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                2
+            </div>
+            <div class="tab-pane fade <?php echo "show active"?>" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <?php include 'gallery.php' ?>
+            </div>
         </div>
 
         <?php include 'footer.php'; ?>
