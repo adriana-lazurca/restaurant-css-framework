@@ -13,7 +13,7 @@
 <body>
     <div class="container mt-2">
 
-        <?php include 'navbar.php'; ?>
+        <?php include '../navigation/navbar.php'; ?>
 
         <div class="row">
             <div class="col-10 col-offset-2 mt-5 mb-5 text-center">
@@ -73,31 +73,28 @@
 
 
 
-        <?php include 'footer.php'; ?>
+        <?php include '../footer/footer.php'; ?>
     </div>
 
+    <!-- DB CONNECTION -->
+    <?php include '../DB/dbConnection.php'; ?>
+
     <?php
-    // DB CONNECTION
-    try {
-        $dataBase = new PDO('mysql:host=localhost;dbname=restaurant;charset=utf8', 'root', '');
-    } catch (Exception $e) {
-        die('Error : ' . $e->getMessage());
-    }
-
-    // INSERT DATA IN DB
-    if (isset($_POST)) {
+        //verify var are not empty
+    if (
+        isset($_POST['email']) and
+        isset($_POST['firstName']) and
+        isset($_POST['lastName']) and
+        isset($_POST['message'])
+    ) {
+        // INSERT DATA IN DB
         $result = $dataBase->prepare('INSERT INTO reviews (`Review_Date`, `User_Name`, `User_Email`, `Message`) VALUES(?, ?, ?, ?)');
-        $userName = isset($_POST['firstName']) . " " . isset($_POST['lastName']);
+        $userName = $_POST['firstName'] . " " . $_POST['lastName'];
 
-        $result->execute(array(date("Y-m-d"), $userName, isset($_POST['email']), isset($_POST['message'])));
+        $result->execute(array(date("Y-m-d"), $userName, $_POST['email'], $_POST['message']));
         $result->closeCursor();
     }
-
-
     ?>
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

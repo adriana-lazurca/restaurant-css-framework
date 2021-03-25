@@ -7,18 +7,16 @@
     <title>Reviews Messages</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="messages.css">
 </head>
 
 <body>
     <?php
+    
     // Connect to DB
-    try {
-        $dataBase = new PDO('mysql:host=localhost;dbname=restaurant;charset=utf8', 'root', '');
-    } catch (Exception $e) {
-        die('Error : ' . $e->getMessage());
-    }
+    include '../DB/dbConnection.php';
 
+    //Delete row
     try {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
@@ -37,7 +35,7 @@
 
     <div class="container mt-2">
 
-        <?php include 'navbar.php'; ?>
+        <?php include '../navigation/navbar.php'; ?>
 
         <div class="row">
             <div class="col-10 col-offset-2 mt-5 mb-5 text-center">
@@ -54,7 +52,7 @@
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade <?php echo ""?>" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="tab-pane fade <?php echo "" ?>" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <!-- CREATE TABLE -->
                 <table class="table">
                     <thead>
@@ -91,15 +89,15 @@
                     ?>
                 </table>
             </div>
-            <div class="tab-pane fade <?php echo ""?>" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="tab-pane fade <?php echo "" ?>" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 2
             </div>
-            <div class="tab-pane fade <?php echo "show active"?>" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                <?php include 'gallery.php' ?>
+            <div class="tab-pane fade <?php echo "show active" ?>" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <?php include 'galleria.php' ?>
             </div>
         </div>
 
-        <?php include 'footer.php'; ?>
+        <?php include '../footer/footer.php'; ?>
 
     </div>
 
