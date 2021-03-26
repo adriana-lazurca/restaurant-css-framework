@@ -1,18 +1,19 @@
 <?php
-// //if upload button is pressed
-// if (isset($_POST['upload'])) {
-//   // $file = $_FILES["image"];
-//   // echo ("hello here");
-//   //path to store the upload image
-//   $target = "images/" . basename($_FILES['image']['name']);
-//   //connect to database
-//   $dataBase = new PDO('mysql:host=localhost;dbname=restaurant;charset=utf8', 'root', '');
-//   //get submitted data from the form
-
-// }
-
 // Connect to DB
 include '../DB/dbConnection.php';
+
+//Delete row
+try {
+  if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $deleteRow = "DELETE FROM gallery WHERE id=$id";
+    $dataBase->exec($deleteRow);
+
+    header("Refresh:0; url=messages.php");
+  }
+} catch (PDOException $e) {
+  echo $deleteRow . "\n" . $e->getMessage();
+}
 
 //Check FORM is submitted
 $status = $statusMsg = '';
@@ -31,7 +32,7 @@ if (isset($_POST["submit"])) {
       $imgContent = addslashes(file_get_contents($image));
 
       // Insert image content into database 
-      $insert = $dataBase->query("INSERT into gallery (Image, Uploaded) VALUES ('$imgContent', NOW())");
+      $insert = $dataBase->query("INSERT into gallery (Image, Uploaded, File_Name) VALUES ('$imgContent', NOW(), '$fileName')");
       if ($insert) {
         $status = 'success';
         $statusMsg = "File uploaded successfully.";
@@ -53,10 +54,10 @@ echo $statusMsg;
 
 
 <!-- FORM -->
-<form method="post" action="" enctype="multipart/form-data">
+<form class="mt-4" method="post" action="" enctype="multipart/form-data">
 
-  <label>Upload Image File:</label><br>
-  <input name="image" type="file">
+  <label>UPLOAD IMAGE:</label><br>
+  <input style="border:1px solid black" name="image" type="file">
   <input type="submit" value="UploadImage" name="submit">
 
 </form>
@@ -64,7 +65,42 @@ echo $statusMsg;
 <?php
 // Get image data from database 
 $imagesResult = $dataBase->query("SELECT Image FROM gallery ORDER BY Uploaded DESC");
+
+//Retrieve data
+$response = $dataBase->query('SELECT Id, Uploaded, File_Name FROM gallery ORDER BY ID DESC LIMIT 0, 10');
+
 ?>
+<!-- CREATE TABLE -->
+<table class="table mt-4">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>File Name</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <?php
+  // Display messages
+  while ($data = $response->fetch()) {
+
+  ?>
+    <tbody>
+      <tr>
+        <td> <?php echo ($data['Uploaded']) ?> </td>
+        <td> <?php echo ($data['File_Name']) ?> </td>
+        <td>
+          <a href="messages.php?id=<?php echo ($data['Id']) ?>">
+            <i class='fa fa-trash'></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+
+  <?php
+  }
+  ?>
+</table>
 
 
 <?php
@@ -73,11 +109,11 @@ if ($imagesResult->rowCount() > 0) {
 ?>
   <div class="gallery">
     <?php while ($row = $imagesResult->fetch()) {
-      $encodedImage = base64_encode($row['Image']);
+
     ?>
-      <img src="data:image;charset=utf8;base64,<?php echo $encodedImage; ?>" />
+
     <?php } ?>
   </div>
 <?php } else { ?>
-  <p class="status error">Image(s) not found...</p>
+  <p class="status error">No image found</p>
 <?php } ?>

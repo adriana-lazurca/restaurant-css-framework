@@ -13,7 +13,16 @@
 <body>
     <div class="container mt-2">
 
-        <?php include '../navigation/navbar.php'; ?>
+        <?php
+        include '../navigation/navbar.php';
+        // Connect to DB
+        include '../DB/dbConnection.php';
+
+        $page = isset($_GET["page"])
+            ? $_GET["page"]
+            : 1;
+
+        ?>
 
         <!-- Pagination -->
         <div class="row">
@@ -26,10 +35,18 @@
                                 <span class="sr-only">Previous</span>
                             </a>
                         </li>
-                        <li class="page-item active"><a class="page-link" href="./gallery.php">1</a></li>
-                        <li class="page-item"><a class="page-link" href="./gallery2.php">2</a></li>
-                        <li class="page-item"><a class="page-link" href="./gallery3.php">3</a></li>
-                        <li class="page-item"><a class="page-link" href="./gallery4.php">4</a></li>
+                        <li class="page-item <?php echo $page == 1 ? 'active' : ''; ?>">
+                            <a class="page-link" href="./gallery.php?page=1">1</a>
+                        </li>
+                        <li class="page-item <?php echo $page == 2 ? 'active' : ''; ?>">
+                            <a class="page-link" href="./gallery.php?page=2">2</a>
+                        </li>
+                        <li class="page-item <?php echo $page == 3 ? 'active' : ''; ?>">
+                            <a class="page-link" href="./gallery.php?page=3">3</a>
+                        </li>
+                        <li class="page-item <?php echo $page == 4 ? 'active' : ''; ?>">
+                            <a class="page-link" href="./gallery4.php?page=4">4</a>
+                        </li>
                         <li class="page-item">
                             <a class="page-link" href="#" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
@@ -44,15 +61,36 @@
         <!-- Galerry -->
         <div container-img>
             <div class="row">
-                <div class="col-12 col-sm-offset-1 col-sm-10 col-md-4 img-container mb-1 mx-auto">
-                    <img src="./gallery/inside2.jpg" alt="inside2">
-                </div>
-                <div class="col-12 col-sm-offset-1 col-sm-10 col-md-4 img-container mb-1 mx-auto">
-                    <img src="./gallery/coffee.jpg" alt="coffee">
-                </div>
-                <div class="col-12 col-sm-offset-1 col-sm-10 col-md-4 img-container mb-1 mx-auto">
-                    <img src="./gallery/croissants.jpg" alt="croissants">
-                </div>
+
+                <?php
+                // Get images data from database 
+                $imagesResult = $dataBase->query("SELECT Image FROM gallery ORDER BY Uploaded DESC");
+
+                if ($imagesResult->rowCount() > 0) {
+                    $encodedImages = array();
+
+                    while ($row = $imagesResult->fetch()) {
+                        //save imgs in array
+                        $encodedImages[] = base64_encode($row['Image']);
+                    }
+                    //skip imgs
+                    $offset = 3 * ($page - 1);
+                    $lastIndex = min(count($encodedImages) - 1, $offset + 2);
+                    
+                    //Display images
+                    for ($index = $offset; $index <= $lastIndex; $index++) {
+                ?>
+                        <div class="col-12 col-sm-offset-1 col-sm-10 col-md-4 img-container mb-1 mx-auto">
+                            <img src="data:image;charset=utf8;base64, <?php echo $encodedImages[$index]; ?>" />
+                        </div>
+                    <?php
+                    } ?>
+
+
+                <?php } else { ?>
+                    <p class="status error">Image(s) not found...</p>
+                <?php } ?>
+
             </div>
         </div>
 

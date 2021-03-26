@@ -12,7 +12,7 @@
 
 <body>
     <?php
-    
+
     // Connect to DB
     include '../DB/dbConnection.php';
 
@@ -90,7 +90,7 @@
                 </table>
             </div>
             <div class="tab-pane fade <?php echo "" ?>" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                2
+                <?php include 'guestbook.php' ?>
             </div>
             <div class="tab-pane fade <?php echo "show active" ?>" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                 <?php include 'galleria.php' ?>
