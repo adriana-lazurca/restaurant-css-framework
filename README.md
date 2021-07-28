@@ -13,7 +13,7 @@ The website must be responsive, at least for small and medium screens. It must a
 * *Visual Studio Code*
 * *HTML 5*
 * *CSS 3*
-* *Bootrsrap*
+* *Bootstrap*
 * *Font Awesome*
 
 ##### Credits:
